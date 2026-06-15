@@ -1,0 +1,99 @@
+Title: Smart Discount Targeting System Using Data Mining
+1. Project Idea
+
+In modern e-commerce platforms, businesses aim to maximize profitability while maintaining customer satisfaction through personalized marketing strategies. One of the key challenges is determining the optimal discount for different customers, as applying uniform discounts can lead to unnecessary revenue loss and inefficient promotional decisions. This project proposes a Smart Discount Targeting System that analyzes customer purchasing behavior to enable data-driven discount allocation.
+
+The system is designed to use data mining techniques to identify meaningful customer segments based on behavioral patterns. By distinguishing between price-sensitive and high-value customers, the system aims to support targeted discount strategies that improve both customer engagement and business efficiency.
+
+2. Methodology Overview
+
+The project follows a structured data mining pipeline. It begins with raw data integration and preprocessing, followed by feature engineering to construct customer-level representations. These features are then used for segmentation through clustering techniques. The later stages of the pipeline, which are currently under development, include visualization, association rule mining, and predictive modeling.
+
+3. Work Completed So Far
+3.1 Data Preprocessing & Transactional Dataset
+
+The first phase of the project focused on preparing a clean and consistent dataset for analysis. Multiple datasets (customers, orders, order items, products, and payments) were merged to create a unified transactional view.
+
+Key steps performed include:
+
+-Handling missing values and inconsistencies
+-Removing invalid or incomplete records
+-Standardizing data formats across tables
+
+Output:
+
+-> Transactional-Level Dataset: cleaned_transactional_data.csv
+   - Each row represents a purchase instance
+   - Contains product, order, and payment information
+
+3.2 Feature Engineering & Customer Dataset
+
+To analyze customer behavior effectively, transactional data was aggregated into a customer-level dataset. This transformation allows each customer to be represented by meaningful behavioral attributes.
+
+Key features created include:
+
+- Total number of orders
+- Total spending
+- Average order value
+- Purchase frequency
+- Recency (time since last purchase)
+- Indicators capturing price sensitivity
+
+Output:
+
+-> Customer-Level Feature Dataset: customer_level_features
+   - Each row corresponds to one customer
+   - Used as input for clustering and further analysis
+
+3.3 Customer Segmentation (Clustering)
+
+Clustering techniques were applied to group customers based on their behavioral features. K-Means clustering was used, and different values of k were explored to identify suitable segmentation.
+
+The preliminary clustering results indicate:
+
+- Clear separation of customers into distinct groups
+- Presence of segments corresponding to:
+   - Price-sensitive customers
+   - Moderate customers
+   - High-value customers
+
+These segments provide an initial foundation for designing targeted discount strategies.
+
+4. Current Observations
+
+The clustering results reveal that customers exhibit diverse purchasing patterns. Some groups show higher sensitivity to pricing and discounts, while others demonstrate consistent high-value purchasing behavior. This variation highlights the importance of segmentation before applying discount strategies.
+
+At this stage, further analysis of these clusters is ongoing, particularly to better understand feature distributions and validate the quality of segmentation.
+
+4. Work in Progress and Future Plan
+
+The next phase of the project focuses on enhancing analysis and extending the system toward decision-making.
+
+Ongoing Work
+- Visualization of clusters using techniques such as PCA
+- Comparative analysis of features across clusters
+- Validation and interpretation of clustering results
+
+Planned Work
+- Association Rule Mining:
+  - Applying Apriori algorithm to identify co-purchase patterns
+- Predictive Modeling
+  - Building classification models (e.g., Decision Trees, Random Forest)
+  - Predicting discount tiers based on customer features
+- Visualization & Insights
+  - Cluster visualization (PCA plots)
+  - Feature distribution analysis (boxplots, comparisons)
+- Business Mapping
+  - Mapping customer segments to appropriate discount strategies
+  - Interpreting results for practical application
+
+6. Conclusion
+
+So far, the project has successfully established a strong foundation by constructing both transactional and customer-level datasets and applying clustering techniques for initial customer segmentation. The results demonstrate meaningful differences in customer behavior, which can be leveraged for targeted marketing strategies.
+
+The upcoming stages will focus on visualization, predictive modeling, and extracting actionable insights, ultimately leading to the development of a complete smart discount targeting system.
+
+
+
+The first phase focused on creating a clean, consistent dataset by merging multiple sources (customers, orders, order items, products, payments). Key steps included handling missing values and inconsistencies, removing invalid or incomplete records, and standardizing data formats.
+Output: cleaned_transactional_data.csv – each row represents a purchase instance with product, order, and payment information.
